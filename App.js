@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import PhotosScreen from "./src/components/photosScreen";
 import FavoritesScreen from "./src/components/favoritesScreen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,10 +16,12 @@ export default function App() {
           headerStyle: {
             backgroundColor: "#FF00FF",
           },
+          // activeColor: "#0000FF",
+          // inactiveColor: "#000",
           tabBarIcon: ({ color, size }) => {
             const icon = {
-              Photos: "album",
-              Favorites: "home",
+              Photos: "picture-in-picture-bottom-right",
+              Favorites: "heart",
             };
 
             return (
